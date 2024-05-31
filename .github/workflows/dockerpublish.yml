@@ -52,6 +52,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           file: Dockerfile-${{ matrix.php_version }}
-          platforms: linux/amd64,linux/arm64,linux/386
+          platforms: linux/amd64
           push: ${{ (github.repository == 'mimirtechco/workspace') && (github.ref == 'refs/heads/master') }}
           tags: ${{ steps.meta.outputs.tags }}
